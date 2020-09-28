@@ -1,0 +1,35 @@
+
+{% block block_three_text_column %}
+    {% set columns = 3 %}
+    {% set id = element.id %}
+    {% block block_three_text_column_left %}
+        {% set element = block.slots.getSlot('left') %}
+
+        <div class="col-lg-4 text-lg-center" data-cms-element-id="{{ id }}">
+            {% block block_three_text_column_left_inner %}
+                {% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+				{# custom/plugins/Photoshoot/src/Resources/views/storefront/element/cms-element-text.html.twig #}
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_three_text_column_center %}
+        {% set element = block.slots.getSlot('center') %}
+
+        <div class="col-lg-4 text-lg-center" data-cms-element-id="{{ id }}">
+            {% block block_three_text_column_center_inner %}
+                {% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_three_text_column_right %}
+        {% set element = block.slots.getSlot('right') %}
+
+        <div class="col-lg-4 text-lg-center" data-cms-element-id="{{ id }}">
+            {% block block_three_text_column_right_inner %}
+                {% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,17 @@
+.sw-cms-block-preview-hero {
+    position: relative;
+    .sw-cms-preview-hero__image {
+        img {
+            position: absolute;
+            width: calc(100% - 24px);
+            max-height: 100px;
+            object-fit: cover;
+            margin: 12px;
+        }
+    }
+
+    .sw-cms-preview-hero__title {
+        z-index: 2;
+        position: relative;
+    }
+}

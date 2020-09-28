@@ -1,0 +1,78 @@
+@import "abstract/variable";
+@import "component/cms-block-center-button";
+@import "component/cms-block-hero";
+@import "component/cms-block-image-multiple-grid";
+@import "layout/header";
+@import "layout/container";
+@import "layout/shopping-experince";
+
+/* START: GENERAL */
+.fullwidth {
+    width: 100%;
+}
+body {
+    font-size: 22px;
+    width: 100%;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* inline-block space fix */
+    margin-right: -4px;
+    text-align: center;
+}
+.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-img {
+    img {
+        max-width: 50%;
+    }
+}
+/* END: GENERAL */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: none;
+}
+
+.language-flag {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    &.country-en {
+        background-repeat: round;
+    }
+}
+
+.breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.cookie-permission-container {
+    .btn-primary {
+        color: $text-button-color;
+        background: $sw-color-brand-primary-dark;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #e65117;
+            border-color: #da4d16;
+            outline: unset;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}

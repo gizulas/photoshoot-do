@@ -1,0 +1,48 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
+*/
+
+
+
+.p-6 {
+    padding: 4rem !important;
+}
+
+.pt-6 {
+    padding-top: 4rem !important;
+}
+
+.pb-6 {
+    padding-bottom: 4rem !important;
+}
+
+.cms-block-container {
+    //padding: 0px !important; to fix problems with shopware experience
+}
+.cms-section-default {
+    .cms-block-text-on-image {
+        .cms-element-text {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+header-main > .container {
+    max-width: inherit;
+}
+
+$grid-gutter-width: 30px;
+$default-spacing: $grid-gutter-width / 2;
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px !important;
+    }
+}
+

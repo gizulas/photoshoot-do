@@ -1,0 +1,11 @@
+{% sw_extends 'administration/index.html.twig' %}
+
+{% block administration_stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/custommodules/administration/css/custom-modules.css') }}" />
+{% endblock %}
+
+{% block administration_scripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/custommodules/administration/js/custom-modules.js') }}"></script>
+{% endblock %}

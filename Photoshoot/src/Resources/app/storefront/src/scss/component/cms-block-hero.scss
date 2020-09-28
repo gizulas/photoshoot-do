@@ -1,0 +1,110 @@
+@import "../overrides";
+@import "../abstract/variable";
+//
+// HERO BLOCK STYLING
+//
+.bg-image.section-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+    @media screen and (max-width: 576px) {
+        background-image: url("#{$theme-asset-path}/img/hero-background-mobile.jpg") !important;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(133deg, rgba(0, 0, 0, 0.42) 28%, rgba(0, 0, 0, 0) 63%);
+    }
+}
+.block-hero {
+    color: white;
+    padding-top: 145px;
+    padding-bottom: 145px;
+    @media screen and (max-width: 576px) {
+        padding-top: 123px;
+        padding-bottom: 269px;
+    }
+    .title {
+        h1 {
+            font-family: Asap;
+            font-size: 56px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: normal;
+            color: $text-hero-color;
+            text-transform: none;
+            margin-bottom: 16px;
+            @media screen and (max-width: 576px) {
+                font-size: 30px;
+                padding-right: 44px;
+            }
+        }
+    }
+    .subtitle {
+        p {
+            font-size: 22px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.45;
+            letter-spacing: normal;
+            margin-bottom: 32px;
+            @media screen and (max-width: 576px) {
+                font-size: 18px;
+            }
+        }
+    }
+    .button {
+        a {
+            font-size: 22px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            width: 241px;
+            height: 70px;
+            border-radius: 4px;
+            padding-top: 21px;
+            padding-bottom: 21px;
+            padding-left: 43px;
+            padding-right: 42px;
+            color: $text-hero-color;
+            background: $sw-color-brand-primary-dark;
+            border-color: transparent;
+            @media screen and (max-width: 576px) {
+                font-size: 18px;
+                line-height: 1.22;
+                width: 180px;
+                height: 48px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 26px;
+                padding-right: 26px;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #e65117;
+                border-color: #da4d16;
+                outline: unset;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//
+// END OF HERO BLOCK STYLING
+//

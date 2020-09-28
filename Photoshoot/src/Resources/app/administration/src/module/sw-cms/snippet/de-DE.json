@@ -1,0 +1,44 @@
+{
+    "sw-cms": {
+        "elements": {
+            "button": {
+                "label": "Button"
+            },
+            "custom-text": {
+                "label": "Benutzerdefinierter Text"
+            }
+        },
+        "blocks": {
+            "textImage": {
+                "hero": {
+                    "label": "Hero"
+                },
+                "centerButton": {
+                    "label": "zentrierte Schaltfläche"
+                },
+                "three-image-text-column": {
+                    "label": "Drei Bild Text Spalten"
+                },
+                "image-card": {
+                    "label": "Bild Karte"
+                }
+            },
+            "image": {
+                "imageMultipleGrid": {
+                    "label": "Bild Mehrfachgitter"
+                }
+            },
+            "text": {
+                "text-heading": {
+                    "label": "Textüberschrift"
+                },
+                "heading": {
+                    "label": "Überschrift"
+                },
+                "three-text-column": {
+                    "label": "Drei Text Spalten"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{% block block_text_heading %}
+	{% set textHeader = block.slots.getSlot('text-header') %}
+	{% set textContent = block.slots.getSlot('text-content') %}
+	{% set columns = 1 %}
+
+	<div class="container">
+		<div class="row">
+		{% block block_text_heading_inner %}
+			<div class="text-header col-12 text-left text-md-center">
+				<h2>{{textHeader.config.content.value}}</h2>
+			</div>
+			<div class="text-content col-12 col-md-10 offset-md-1 text-left text-md-center">
+				<p>{{textContent.config.content.value}}</p>
+			</div>
+		{% endblock %}
+		</div>
+	</div>
+{% endblock %}

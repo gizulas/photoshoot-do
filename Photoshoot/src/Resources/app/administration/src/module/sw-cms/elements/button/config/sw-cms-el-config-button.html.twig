@@ -1,0 +1,16 @@
+{% block sw_cms_element_button_config %}
+    <div class="sw-cms-el-config-button">
+        <sw-field class="button-field"
+                  v-model="element.config.buttonText.value"
+                  type="text"
+                  label="Button Text"
+                  placeholder="Button Text">
+        </sw-field>
+        <sw-field class="button-field"
+                  v-model="element.config.buttonLink.value"
+                  type="text"
+                  label="Button Link"
+                  placeholder="Button Link...">
+        </sw-field>
+    </div>
+{% endblock %}

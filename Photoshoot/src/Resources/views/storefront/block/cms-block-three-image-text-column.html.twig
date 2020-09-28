@@ -1,0 +1,70 @@
+{% block block_three_image_text_column %}
+	{% set columns = 3 %}
+	{% set id = element.id %}
+
+	{% block block_three_image_text_column_left %}
+		{% set element = block.slots.getSlot('left') %}
+
+		<div class="col-lg-4 left text-lg-center" data-cms-element-id="{{ id }}">
+			{% block block_three_image_text_column_left_image %}
+				{% set element = block.slots.getSlot('left-image') %}
+
+				<div data-cms-element-id="{{ id }}">
+					{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+				</div>
+			{% endblock %}
+
+			{% block block_three_image_text_column_left_text %}
+				{% set element = block.slots.getSlot('left-text') %}
+
+				<div data-cms-element-id="{{ id }}">
+					{% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+				</div>
+			{% endblock %}
+		</div>
+	{% endblock %}
+
+	{% block block_three_text_column_center %}
+		{% set element = block.slots.getSlot('center') %}
+
+		<div class="col-lg-4 center text-lg-center" data-cms-element-id="{{ id }}">
+			{% block block_three_image_text_column_center_image %}
+				{% set element = block.slots.getSlot('center-image') %}
+
+				<div data-cms-element-id="{{ id }}">
+					{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+				</div>
+			{% endblock %}
+
+			{% block block_three_image_text_column_center_text %}
+				{% set element = block.slots.getSlot('center-text') %}
+
+				<div data-cms-element-id="{{ id }}">
+					{% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+				</div>
+			{% endblock %}
+		</div>
+	{% endblock %}
+
+	{% block block_three_text_column_right %}
+		{% set element = block.slots.getSlot('right') %}
+
+		<div class="col-lg-4 right text-lg-center" data-cms-element-id="{{ id }}">
+			{% block block_three_image_text_column_right_image %}
+                {% set element = block.slots.getSlot('right-image') %}
+
+                <div data-cms-element-id="{{ id }}">
+                    {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                </div>
+            {% endblock %}
+
+            {% block block_three_image_text_column_right_text %}
+                {% set element = block.slots.getSlot('right-text') %}
+
+                <div data-cms-element-id="{{ id }}">
+                    {% sw_include "@Photoshoot/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                </div>
+            {% endblock %}
+		</div>
+	{% endblock %}
+{% endblock %}

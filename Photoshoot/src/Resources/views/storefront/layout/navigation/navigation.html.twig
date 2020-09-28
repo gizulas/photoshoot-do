@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/navigation.html.twig'  %}
+
+{% block layout_main_navigation_menu_home %}
+	<!-- begin of menu_home -->
+	{# No need to use yet
+	  <a class="nav-link main-navigation-link{% if controllerAction is same as('home') %} active{% endif %} home-link" href="{{ path('frontend.home.page') }}" itemprop="url" title="{{ "general.homeLink"|trans|striptags }}">
+			<div class="main-navigation-link-text">
+				<span itemprop="name">{{ "general.homeLink"|trans|sw_sanitize }}</span>
+			</div>
+		</a> 
+	#}
+	<!-- end of menu_home -->
+{% endblock %}
+
+{% block layout_main_navigation_navbar %}
+	{% block layout_main_navigation_menu %}
+		{{parent()}}
+	{% endblock %}
+{% endblock %}

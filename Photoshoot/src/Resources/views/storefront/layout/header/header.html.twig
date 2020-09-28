@@ -1,0 +1,69 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+ {% block layout_top_bar %} {% endblock %}
+
+ {% block layout_header_navigation %}
+		<div class="row justify-content-between">
+	{# <div class="cms-block-container-row row cms-row"> #}
+		{% block layout_header_logo %}
+		 <div class="col-7 d-flex flex-column justify-content-center logo-image">
+			{# <div class="col-3 d-flex flex-column justify-content-center logo-image"> #}
+				{% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+			</div>
+		{% endblock %}
+
+		{# {% block layout_main_navigation %}
+					<div class="col-5 d-flex justify-content-start align-items-center">
+						{% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig'%}
+					</div>
+				{% endblock %} #}
+
+		{% block layout_header_search %}{% endblock %}
+
+		{% block layout_header_actions %}
+				{# <div class="col-4 order-1 user-menu order-sm-2 header-actions-col"> #}
+				 <div class="col-5 order-1 user-menu col-sm-auto order-sm-2 header-actions-col d-flex justify-content-end">
+				 <div class="row no-gutters">
+
+					{% block layout_header_actions_account %}{% endblock %}
+
+					{% block layout_header_actions_cart %}
+						{# {{ parent() }} #}
+					{% endblock %}
+
+					{% block layout_header_top_bar %}
+						<div class="col-auto order-1 col-sm-auto order-sm-2 header-actions-col">
+							<nav class="top-bar-nav">
+								{# {% block layout_header_actions_account_widget_dropdown_login %}
+									{% if not context.customer %}
+										<a href="{{ path('frontend.account.login.page') }}" title="{{ "account.loginSubmit"|trans|striptags }}" class="btn-login">
+											{{ "account.loginSubmit"|trans|sw_sanitize }}
+										</a>
+										<a href="{{ path('frontend.account.login.page') }}" title="{{ "account.orRegisterLink"|trans|striptags }}" class="button-signup">
+											{{ "account.orRegisterLink"|trans|striptags }}
+										</a>
+									{% endif %}
+								{% endblock %} #}
+
+									{% block layout_header_top_bar_language %}
+                                    {# {{ dump() }} #}
+										{% sw_include '@Storefront/storefront/layout/header/actions/language-widget.html.twig' %}
+									{% endblock %}
+								</nav>
+							</div>
+						{% endblock %}
+					</div>
+				</div>
+			{% endblock %}
+
+			{% block layout_header_navigation_toggle_tablet %}{% endblock %}
+
+		</div>
+		{# <div class="hero {% if activeRoute != " frontend.home.page"  %} internals {% endif %}">
+				<div class="container">
+					<h1>{{"dloop.heroTitle"|trans|sw_sanitize }}</h1>
+					<p>{{"dloop.heroSubtitle"|trans|sw_sanitize }}.</p>
+					<!-- -->
+				</div>
+			</div> #}
+	{% endblock %}

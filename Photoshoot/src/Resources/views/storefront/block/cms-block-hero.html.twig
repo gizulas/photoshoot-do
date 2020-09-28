@@ -1,0 +1,29 @@
+{% block block_hero %}
+	{% set title = block.slots.getSlot('title') %}
+	{% set subtitle = block.slots.getSlot('subtitle') %}
+	{% set button = block.slots.getSlot('button') %}
+	{% set columns = 1 %}
+
+
+	<div class="block-hero container">
+		<div class="row">
+			<div class="col-12">
+				{% block block_hero_title %}
+					<div class="title col-12 col-md-6 px-0">
+						<h1>{{title.config.content.value}}</h1>
+					</div>
+				{% endblock %}
+				{% block block_hero_sub_title %}
+					<div class="subtitle col-12 col-md-6 px-0">
+						<p>{{subtitle.config.content.value}}</p>
+					</div>
+				{% endblock %}
+				{% block block_hero_button %}
+					<div class="button">
+						<a class="btn btn-primary" href="{{ button.config.buttonLink.value}}">{{ button.config.buttonText.value}}</a>
+					</div>
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

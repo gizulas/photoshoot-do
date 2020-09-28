@@ -1,0 +1,44 @@
+{
+    "sw-cms": {
+        "elements": {
+            "button": {
+                "label": "Button"
+            },
+            "custom-text": {
+                "label": "Custom Text"
+            }
+        },
+        "blocks": {
+            "textImage": {
+                "hero": {
+                    "label": "Hero"
+                },
+                "centerButton": {
+                    "label": "centered Button"
+                },
+                "three-image-text-column": {
+                    "label": "Three Image Text Columns"
+                },
+                "image-card": {
+                    "label": "Image Card"
+                }
+            },
+            "image": {
+                "imageMultipleGrid": {
+                    "label": "Image Multiple Grid"
+                }
+            },
+            "text": {
+                "text-heading": {
+                    "label": "Text Heading"
+                },
+                "heading": {
+                    "label": "Heading"
+                },
+                "three-text-column": {
+                    "label": "Three Text Columns"
+                }
+            }
+        }
+    }
+}

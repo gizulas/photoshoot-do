@@ -1,0 +1,22 @@
+
+//
+// CENTER BUTTON STYLING
+//
+
+.center-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 24px;
+        text-transform: uppercase;
+    }
+}
+
+//
+// END CENTER BUTTON STYLING
+//

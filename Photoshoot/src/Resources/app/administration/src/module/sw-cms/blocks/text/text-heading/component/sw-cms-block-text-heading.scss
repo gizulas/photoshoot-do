@@ -1,0 +1,11 @@
+.sw-cms-block-text-heading {
+    .sw-cms-slot {
+        text-align: center;
+        height: 40px;
+        &:first-child {
+            .sw-cms-el-test {
+                font-weight: bold;
+            }
+        }
+    }
+}

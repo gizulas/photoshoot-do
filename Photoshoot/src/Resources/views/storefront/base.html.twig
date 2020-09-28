@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+
+{% block base_navigation %}{% endblock %}
+
+
+{% block base_body %}
+	<body class="is-ctl-{{ controllerName|lower }} is-act-{{ controllerAction|lower }} {{ page.cmsPage.type }}">
+		{% if shopware.config.ThemeDish.config.pimactivateanalytics %}
+			<!-- Google Tag Manager (noscript) -->
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id={{ shopware.config.ThemeDish.config.pimanalyticsid }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			</noscript>
+			<!-- End Google Tag Manager (noscript) -->
+		{% endif %}
+		{{ parent() }}
+	</body>
+{% endblock %}

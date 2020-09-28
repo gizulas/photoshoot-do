@@ -1,0 +1,21 @@
+{% block sw_cms_block_image_card %}
+	<div class="sw-cms-block-image-card">
+		<div class="sw-cms-block-image-card__left">
+            <slot name="left-image"></slot>
+            <slot name="left-text"></slot>
+            <slot name="left-button"></slot>
+        </div>
+
+        <div class="sw-cms-block-image-card__center">
+            <slot name="center-image"></slot>
+            <slot name="center-text"></slot>
+            <slot name="center-button"></slot>
+        </div>
+
+        <div class="sw-cms-block-image-card__right">
+            <slot name="right-image"></slot>
+            <slot name="right-text"></slot>
+            <slot name="right-button"></slot>
+        </div>
+	</div>
+{% endblock %}
